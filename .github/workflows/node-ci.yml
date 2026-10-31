@@ -47,3 +47,8 @@ jobs:
           CLIENT_ID: ${{ secrets.shalina123 }}
         run: |
           echo "Service Principal Client ID length is: ${#CLIENT_ID}"
+      - name: Verify Secret Access
+        env:
+          CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        run: |
+          echo "Service Principal Client ID length is: ${#CLIENT_ID}"
